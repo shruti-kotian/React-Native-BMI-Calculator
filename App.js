@@ -1,9 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, { Component } from 'react';
 import { Text, View, ImageBackground, StyleSheet, TextInput, TouchableOpacity, Image } from 'react-native'
+import SplashScreen from 'react-native-splash-screen';
 
 export default class App extends Component {
 
+  componentDidMount() {
+    SplashScreen.hide();
+  }
   state = {
     height: 0,
     mass: 0,
@@ -83,6 +87,6 @@ const styles = StyleSheet.create({
     color: '#FFCB1F',
     fontSize: 65,
     padding: 15,
-  }
+  },
 });
 
